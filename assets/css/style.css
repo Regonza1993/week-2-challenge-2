@@ -1,0 +1,303 @@
+/* Variables */
+:root {
+    --primary-color: #1194ec;
+    --secondary-color: #1194ec;
+    --tertiary-color: #000814;
+}
+
+/* Universal Selectors */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default font-size */
+html {
+    font-size: 62.5%;
+}
+
+/* Font Styles */
+body {
+    font-family: 'Rock Salt', cursive;
+    font-family: 'Hind', sans-serif;
+    font-family: 'Caveat', cursive;
+}
+
+/* Default Img Style */
+img {
+    width: 100%;
+    height: 100;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Header/Navigation style */
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/fantasybackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 10rem;
+    font-family: 'Caveat', cursive;
+    color: var(--secondary-color);
+    padding-left: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    font-size: 5rem;
+    padding: 0 15px;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--secondary-color);
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: 'Rock Salt', cursive;
+    color: var(--tertiary-color);
+    text-align: center;
+    padding: 15px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+.about p {
+    font-size: 2rem;
+    padding: 0 35px;
+    color: var(--tertiary-color);
+    text-align: left;
+    font-family: 'Hind', sans-serif;
+}
+
+/* Work Section */
+.work {
+    background: var(--primary-color);
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--primary-color);
+    list-style: none;
+}
+
+.gallery-item {
+    width: calc(100% / 2); 
+    margin: 0 15px 30px;
+    padding: 0;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+.overlay {
+    background-color: var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 20px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 0.6;
+}
+
+.overlay a {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: 'Hind', sans-serif;
+    text-decoration: none;
+}
+
+/* Footer/Contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.75rem;
+    color: var(--tertiary-color);
+    font-family: 'Hind', sans-serif;
+    text-align: left;
+    padding: 15px;
+}
+
+h4 {
+    font-size: 2.5rem;
+    color: var(--tertiary-color);
+    font-family: 'Rock Salt', cursive;
+}
+
+aside {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    flex-direction: column;
+}
+
+/* Social Media Icons */
+.social i {
+    font-size: 4rem;
+    padding: 10px;
+}
+
+.social .fa-facebook-square {
+    color: #000814;
+}
+
+.social .fa-twitter-square {
+    color: #000814;
+}
+
+.social .fa-linkedin {
+    color: #000814;
+}
+
+.social .fa-github-square {
+    color: #000814;
+}
+
+.social .fa-instagram-square {
+    color: #000814;
+}
+
+.social i:hover,
+.social i:focus {
+    color: var(--secondary-color);
+}
+
+.contact img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    h1 {
+        font-size: 8rem;
+    }
+
+    nav a {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 7rem;
+    }
+
+    nav a {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .about p {
+        font-size: 1.5rem;
+    }
+
+    .overlay a {
+        font-size: 1.5rem;
+    }
+
+    .contact img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact p {
+        font-size: 1.5rem;
+    }
+
+    .social i {
+        font-size: 3rem;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    .social i {
+        font-size: 2.5rem;
+    }
+
+}
